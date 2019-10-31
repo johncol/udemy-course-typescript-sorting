@@ -1,3 +1,3 @@
 "use strict";
-var hello = "hello";
+var hello = 'Happy Halloween!!';
 console.log(hello);

@@ -1,3 +1,3 @@
-const hello: string = "hello";
+const hello: string = 'Happy Halloween!!';
 
 console.log(hello);
