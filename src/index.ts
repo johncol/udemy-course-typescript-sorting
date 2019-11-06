@@ -1,6 +1,9 @@
 import { Sorter } from './Sorter';
+import { NumbersCollection } from './NumbersCollection';
 
-const sorter: Sorter = new Sorter([6, 1, 0, -5, 55, 10]);
-console.log(sorter.collection);
+const collection: NumbersCollection = new NumbersCollection([6, 1, 0, -5, 55, 10]);
+const sorter: Sorter = new Sorter(collection);
+collection.print();
+
 sorter.sort();
-console.log(sorter.collection);
+collection.print();
