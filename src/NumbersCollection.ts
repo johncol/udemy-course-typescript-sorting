@@ -1,5 +1,9 @@
 export class NumbersCollection {
-  constructor(private numbers: number[]) {}
+  private numbers: number[];
+
+  constructor(...numbers: number[]) {
+    this.numbers = numbers;
+  }
 
   get length(): number {
     return this.numbers.length;
