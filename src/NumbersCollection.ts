@@ -1,4 +1,7 @@
-export class NumbersCollection {
+import { Sortable } from './Sortable';
+import { Sorter } from './Sorter';
+
+export class NumbersCollection implements Sortable {
   private numbers: number[];
 
   constructor(...numbers: number[]) {
@@ -21,5 +24,9 @@ export class NumbersCollection {
 
   print = (): void => {
     console.log(this.numbers);
+  };
+
+  sort = (): void => {
+    Sorter.sort(this);
   };
 }

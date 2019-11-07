@@ -1,4 +1,7 @@
-export class CharactersCollection {
+import { Sortable } from './Sortable';
+import { Sorter } from './Sorter';
+
+export class CharactersCollection implements Sortable {
   private letters: string[];
 
   constructor(string: string) {
@@ -21,5 +24,9 @@ export class CharactersCollection {
 
   print = (): void => {
     console.log(this.letters.join(''));
+  };
+
+  sort = (): void => {
+    Sorter.sort(this);
   };
 }

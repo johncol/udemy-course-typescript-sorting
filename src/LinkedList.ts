@@ -1,4 +1,7 @@
-export class LinkedList {
+import { Sortable } from './Sortable';
+import { Sorter } from './Sorter';
+
+export class LinkedList implements Sortable {
   private head: Node | null = null;
 
   constructor(...values: number[]) {
@@ -47,6 +50,10 @@ export class LinkedList {
     output = output.substring(0, output.length - 4);
 
     console.log(output);
+  };
+
+  sort = (): void => {
+    Sorter.sort(this);
   };
 
   at = (index: number): Node => {
